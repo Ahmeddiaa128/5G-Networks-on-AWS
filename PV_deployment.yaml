@@ -1,0 +1,23 @@
+#This is a YAML definition of a Kubernetes PersistentVolume (PV) object
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: example-local-pv9
+  labels:
+    project: free5gc
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /home/mongodb
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - worker1
