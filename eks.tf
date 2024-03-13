@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 19.0"
 
   cluster_name    = "5G-Core-Net"
-  cluster_version = "1.27"
+  cluster_version = "1.29"
 
   cluster_endpoint_public_access  = true       #This specifies whether the cluster endpoint is publicly accessible.
 
@@ -81,7 +81,7 @@ module "eks" {
 
   aws_auth_roles = [
     {
-      rolearn  = "arn:aws:iam::381351049252:role/AWSServiceRoleForAmazonEKS"
+      rolearn  = "arn:aws:iam::891377170667:role/AWSServiceRoleForAmazonEKS"
       username = "role1"
       groups   = ["system:masters"]
     },
@@ -89,38 +89,38 @@ module "eks" {
 
   aws_auth_users = [
     {
-      userarn  = "arn:aws:iam::381351049252:user/Diaa"
+      userarn  = "arn:aws:iam::891377170667:user/Diaa"
       username = "Diaa"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "arn:aws:iam::381351049252:user/Abdel-Naby"
+      userarn  = "arn:aws:iam::891377170667:user/Abdel-Naby"
       username = "Abdel-Naby"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "arn:aws:iam::381351049252:user/Asmaa"
+      userarn  = "arn:aws:iam::891377170667:user/Asmaa"
       username = "Asmaa"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "arn:aws:iam::381351049252:user/Hesham"
+      userarn  = "arn:aws:iam::891377170667:user/Hesham"
       username = "Hesham"
       groups   = ["system:masters"]
     },{
-      userarn  = "arn:aws:iam::381351049252:user/Mostafa"
+      userarn  = "arn:aws:iam::891377170667:user/Mostafa"
       username = "Mostafa"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "arn:aws:iam::381351049252:user/Abdallah"
+      userarn  = "arn:aws:iam::891377170667:user/Abdallah"
       username = "Abdallah"
       groups   = ["system:masters"]
     }
   ]
 
   aws_auth_accounts = [
-    "381351049252"
+    "891377170667"
   ]
 
   tags = {
