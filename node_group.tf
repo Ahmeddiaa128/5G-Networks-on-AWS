@@ -5,7 +5,8 @@ module "eks_managed_node_group" {
   cluster_name    = module.eks.cluster_name
   cluster_version = module.eks.cluster_version
   subnet_ids      = module.vpc.public_subnets
-
+  
+  cluster_service_cidr = module.eks.cluster_service_cidr
 
   cluster_primary_security_group_id = module.eks.cluster_primary_security_group_id
   vpc_security_group_ids = [
